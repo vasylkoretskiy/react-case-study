@@ -1,0 +1,99 @@
+
+#root {
+  display: flex;
+  justify-content: center;
+  background: #f7f7f7;
+}
+.header-search {
+  display: flex;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  justify-content: center;
+  height: 35px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  z-index: 999;
+  width: 100vw;
+  background: #639DBC;
+}
+
+.content-grid {
+  text-align: center; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vh;
+  padding: 64px;
+}
+.message-comp {
+  padding: 64px;
+}
+/* 
+poster css 
+*/
+.poster {
+  padding: 20px;
+}
+
+.poster-img {
+  height: 460px;
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+  -moz-box-shadow:    0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+  box-shadow:         0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+}
+
+.poster-title {
+  background: #e8e8e8;
+  padding: 5px;
+  margin-top: 15px;
+  -webkit-box-shadow: 0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+  -moz-box-shadow:    0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+  box-shadow:         0px 0px 5px 4px rgba(136, 136, 140, 0.39);
+}
+.image {
+  height: 100%;
+  width: 100%;
+}
+.content-grid {
+  text-align: center; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-left: 64px;
+  padding-right: 64px;
+}
+
+
+@media (min-width: 576px) {
+    .content-grid {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .content-grid {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .content-grid {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .content-grid {
+        max-width: 1140px;
+    }
+}
+
+@media (min-width: 1452px) {
+    .content-grid {
+        max-width: 1360px;
+    }
+}

@@ -1,0 +1,36 @@
+version: '3.2'
+services:
+  backend:
+    container_name: backend
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    env_file: 
+      - .env
+    environment:
+      - NODE_ENV=dev
+    command: "npm run dev"
+  redis:
+    container_name: redis
+    build:
+      context: ./redis/
+      dockerfile: Dockerfile
+    image: sameersbn/redis:4.0.9-1
+    ports:
+      - "3404:6379"
+    volumes:
+      - /srv/docker/redis:/var/lib/redis
+    restart: always
+  front:
+    container_name: frontend
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    links:
+      - backend
+    ports:
+      - '3000:3000'
+    env_file: 
+      - .env
